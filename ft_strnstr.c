@@ -18,23 +18,18 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t n)
 	size_t	b;
 
 	a = 0;
-	b = 0;
 	if (to_find[a] == '\0')
 		return ((char *)str);
 	if (n == 0)
 		return (0);
 	while (str[a] != '\0' && a < n)
 	{
-		if (str[a] == to_find[b])
+		b = 0;
+		while (str[a + b] == to_find[b] && to_find[b] != '\0' && (a + b) < n)
 		{
-			while (str[a] == to_find[b] && to_find[b] != '\0')
-			{
-				a++;
-				b++;
-			}
-			if ((str[a] != to_find[b] && to_find[b] != '\0') || a > n)
-				return (0);
-			return ((char *)str + (a - b));
+			if (to_find[b + 1] == '\0')
+				return ((char *)str + a);
+			b++;
 		}
 		a++;
 	}
@@ -43,10 +38,10 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t n)
 
 /*int    main(void)
 {
-    char    ki[] = "amanha de manha";
-    char    str[] = "ha";
+    char    ki[] = "amaha de manha";
+    char    str[] = "man";
 
-    printf("minha funcao:%s\n", ft_strnstr(ki, str, 6));
+    printf("minha funcao:%s\n", ft_strnstr(ki, str, 20));
     printf ("%s\n", ft_strnstr("lorem ipsum dolor sit amet", "dolor", 15));
     printf ("%s\n", ft_strnstr("lorem ipsum dolor sit amet", "", 0));
     printf ("%s\n", ft_strnstr(NULL, "fsf", 0));
