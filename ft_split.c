@@ -83,7 +83,9 @@ char	**ft_split(char const *s, char c)
 	while (result[i])
 	{
 		puts(result[i]);
+		free(result[i]);
 		i++;
 	}
+	free(result);
 	return (0);
 }*/
