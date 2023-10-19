@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dcarrilh <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: dcarrilh <dcarrilh@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 11:12:03 by dcarrilh          #+#    #+#             */
-/*   Updated: 2022/11/10 15:02:38 by dcarrilh         ###   ########.fr       */
+/*   Updated: 2023/10/19 18:06:28 by dcarrilh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static int	count_size(char const *str, char c)
 	i = 0;
 	while (str[a])
 	{
-		if (str[a] != c)
+		if (str[a] != c && (str[a - 1] == c || a == 0))
 			i++;
 		a++;
 	}

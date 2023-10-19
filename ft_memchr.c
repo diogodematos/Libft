@@ -6,7 +6,7 @@
 /*   By: dcarrilh <dcarrilh@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 13:30:13 by dcarrilh          #+#    #+#             */
-/*   Updated: 2023/10/19 17:38:24 by dcarrilh         ###   ########.fr       */
+/*   Updated: 2023/10/19 17:49:46 by dcarrilh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	*ft_memchr(void *str, int a, size_t n)
 {
 	unsigned char	*pt;
-	size_t	b;
+	size_t			b;
 
 	pt = (unsigned char *)str;
 	b = 0;
