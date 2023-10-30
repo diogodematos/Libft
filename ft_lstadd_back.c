@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dcarrilh <dcarrilh@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: dcarrilh <dcarrilh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 12:19:51 by dcarrilh          #+#    #+#             */
-/*   Updated: 2023/10/19 18:06:04 by dcarrilh         ###   ########.fr       */
+/*   Updated: 2023/10/30 12:06:38 by dcarrilh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	if (!*lst)
 		*lst = new;
 	else
-	{	
+	{
 		fim = ft_lstlast(*lst);
 		fim->next = new;
 	}

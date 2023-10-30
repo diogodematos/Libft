@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dcarrilh <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: dcarrilh <dcarrilh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 12:17:32 by dcarrilh          #+#    #+#             */
-/*   Updated: 2022/11/09 12:17:34 by dcarrilh         ###   ########.fr       */
+/*   Updated: 2023/10/30 12:06:10 by dcarrilh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static int	size_itoa(int n)
 	{
 		len++;
 		teste = -teste;
-	}	
+	}
 	if (teste == 0)
 		len++;
 	while (teste > 0)
@@ -59,7 +59,7 @@ char	*ft_itoa(int n)
 		num = num / 10;
 	}
 	return (str);
-}	
+}
 
 /*int		main(void)
 {
